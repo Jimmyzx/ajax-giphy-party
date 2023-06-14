@@ -12,7 +12,7 @@ async function handleFormSubmit(event) {
         appendGif(gifUrl);
         removeAllAlerts();
       } else {
-        const alertDiv = createAlert('No GIFs found.');
+        const alertDiv = createAlert('NO GIPHYs FOUND!');
         const searchForm = document.getElementById('searchForm');
         searchForm.insertBefore(alertDiv, searchForm.firstChild);
         const closeButton = document.createElement('button');
@@ -31,7 +31,7 @@ async function handleFormSubmit(event) {
   
   function createAlert(message) {
     const alertDiv = document.createElement('div');
-    alertDiv.classList.add('alert', 'alert-warning');
+    alertDiv.classList.add('alert', 'alert-danger');
     alertDiv.textContent = message;
     return alertDiv;
   }
